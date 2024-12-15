@@ -1,4 +1,4 @@
-//! tonapi.rs rust SDK
+//! [WORK IN PROGRESS] tonapi.rs rust SDK
 
 mod clients;
 mod error;

@@ -1,7 +1,11 @@
 [package]
-name = "tonapi"
-version = "0.1.0"
+name = "ton-api-client"
+description = "tonapi.io SDK for Rust"
+version = "0.0.1"
 edition = "2021"
+authors = ["S. Suprun <hello@syoma.website>"]
+publish = true
+repository = "https://github.com/supadupadao/ton-api-client"
 
 [features]
 tungstenite-ws = ["dep:tokio-tungstenite", "dep:tokio", "dep:futures-util", "ws"]
