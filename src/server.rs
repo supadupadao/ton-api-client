@@ -1,14 +1,9 @@
 use url::Url;
 
-#[derive(Debug)]
+#[derive(Debug, Default)]
 pub enum Server {
+    #[default]
     MainNet,
     TestNet,
     Custom(Url),
-}
-
-impl Default for Server {
-    fn default() -> Server {
-        Server::MainNet
-    }
 }

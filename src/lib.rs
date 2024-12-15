@@ -1,9 +1,9 @@
 //! tonapi.rs rust SDK
 
-pub(crate) mod clients;
+mod clients;
 mod error;
-pub(crate) mod net;
-pub(crate) mod server;
+mod net;
+mod server;
 
 #[cfg(feature = "ws")]
 /// WebSocket tonapi module
@@ -31,5 +31,6 @@ pub mod ws {
 
 /// Common
 pub mod common {
+    pub use crate::error::{TonApiError, TonApiResult};
     pub use crate::server::Server;
 }
