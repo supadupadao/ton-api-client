@@ -1,0 +1,18 @@
+[package]
+name = "tonapi"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+tungstenite-ws = ["dep:tokio-tungstenite", "dep:tokio", "dep:futures-util", "ws"]
+ws = []
+
+[dependencies]
+async-trait = { version = "0.1.83" }
+serde = { version = "1.0.216" }
+serde_json = { version = "1.0.133" }
+tokio = { version = "1.42.0", features = ["net"], optional = true }
+tokio-tungstenite = { version = "0.24.0", features = ["native-tls"], optional = true }
+tonlib-core = { version = "0.22.4" }
+url = { version = "2.5.4" }
+futures-util = { version = "0.3.31", optional = true }
