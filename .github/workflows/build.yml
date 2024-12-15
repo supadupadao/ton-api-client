@@ -1,0 +1,26 @@
+name: Code checks
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build without features
+        run: cargo build
+
+      - name: Build tungstenite feature
+        run: cargo build --features tungstenite-ws
+
+      - name: Test
+        run: cargo test
+
+      - name: Lint
+        run: cargo clippy
